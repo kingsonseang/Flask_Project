@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table>
+    <tr>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Department</th>
+        <th>Lecturer</th>
+    </tr>
+    <tr>
+        <td>{{course.COURSE_ID}}</td>
+        <td>{{course.COURSE_NAME}}</td>
+        <td>{{course.DEPARTMENT}}</td>
+        <td>{{course.LECTURER}}</td>
+    </tr>
+</table>
+
+
+
+{% endblock content %}

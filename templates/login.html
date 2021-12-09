@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 class="heading">STUDENT PORTAL</h1>
+    <h3 class="sub_heading">Login</h3>
+
+    <form action="/login" method="POST">
+
+        <div class="input_contianer">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="JohnyDoe">
+        </div>
+        
+        <div class="input_contianer">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="********">
+        </div>
+        
+        <br>
+        <input type="hidden" value="login" name="submit">
+        <button class="submit_btn" type="submit">submit</button>
+
+        <br>
+        <p>{{ msg }}</p>
+        <p class="forgotP"><a href="/password_recovery">Forgot password</a></p>
+        <br>
+
+    </form>
+    <br>
+    <p class="left">I dont have an account <a href="/Reg">Sign up</a>.</p>
+
+{% endblock content%}

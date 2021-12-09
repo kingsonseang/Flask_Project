@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    <h1 class="heading">STUDENT REGISTRATION</h1>
+    
+    <h3 class="sub_heading">Register</h3>
+
+    <form action="/Reg" method="POST">
+
+        <div class="input_contianer">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" placeholder="John" required>
+        </div>
+
+        <div class="input_contianer">
+            <label for="middle_name">Middle Name</label>
+            <input type="text" name="middle_name" placeholder="Emeka">
+        </div>
+        
+        <div class="input_contianer">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" placeholder="Doe" required>
+        </div>
+        
+        <div class="input_contianer">
+            <label for="DOB">Date Of Birth</label>
+            <input type="date" name="DOB" required>
+        </div>
+        
+        <div class="input_contianer">
+            <label for="age">Age</label>
+            <input type="numeric" name="age" placeholder="18" required>
+        </div>
+        
+        <div class="input_contianer">
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" name="phone_number" placeholder="+234 000 000 0000" required>
+        </div>
+        
+        <div class="input_contianer">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="example@email.com">
+        </div>
+        
+        <div class="input_contianer">
+            <label for="gender">Gender</label>
+            <select class="select" name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="input_contianer">
+            <label for="Gaurdian_name">Gaurdian Name</label>
+            <input type="text" name="Gaurdian_name" placeholder="Stewart Doe">
+        </div>
+        
+        <div class="input_contianer">
+            <label for="Gaurdian_phone_number">Gaurdian Name</label>
+            <input type="tel" name="Gaurdian_phone_number" placeholder="+234 000 000 0000">
+        </div>
+        <br>
+        <h3>Select a Department to Study in:</h3>
+        {% for Department in Departments %}
+            
+        <div class="input_contianer">
+            <label for="course">{{Department.Department_name}}</label>
+            <input value="{{Department.Department_id}}" type="checkbox" name="Department_id" id="Department">
+        </div>
+
+        {% endfor %}
+        <br>
+        <h3>Set a Username and Password</h3>
+        <br>
+
+        <div class="input_contianer">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="JohnyDoe" required>
+        </div>
+
+        <div class="input_contianer">
+            <label for="password">Password</label>
+        <input type="password" name="password" placeholder="********" required>
+        </div>
+
+        <p>Set to something you won't forget</p>
+
+        <div class="input_contianer">
+            <label for="Recovery_Question">Password Recovery Question</label>
+        <input type="text" name="Recovery_Question" placeholder="Who are You?" required>
+        </div>
+        <div class="input_contianer">
+            <label for="Recovery_Question_Ans">Password Recovery Question Ans</label>
+        <input type="text" name="Recovery_Question_Ans" placeholder="i am me" required>
+        </div>
+
+        <input type="hidden" value="register" name="submit">
+        <button class="submit_btn" type="submit">submit</button>
+    </form>
+
+    <p class="left">Already have an account <a href="/login">Login</a>.</p>
+
+{% endblock content %}

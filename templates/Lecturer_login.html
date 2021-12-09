@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 class="heading">WELCOME TO XX ACADEMY LECTURER PORTAL</h1>
+    <br>
+    <h3 class="sub_heading">Login to continue.</h3>
+    <br>
+    <p>{{ msg }}</p>
+    <br>
+    <form action="/Lecturer-login" method="POST">
+
+        <div class="input_contianer">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="JohnyDoe@example.com">
+        </div>
+
+        <div class="input_contianer">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="********">
+        </div>
+        
+        <br>
+        <input type="hidden" value="login" name="submit">
+        <button class="submit_btn" type="submit">submit</button>
+
+    </form>
+
+{% endblock content%} 

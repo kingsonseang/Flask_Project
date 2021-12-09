@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    color: rgb(22, 22, 22);
+    padding-bottom: 5%;
+    font-family: Roboto, sans-serif;
+
+    .heading {
+        font-size: 2.5em;
+        margin-top: 1.7em;
+        margin-bottom: 0.5em;
+        pointer-events: none;
+    }
+
+    .sub_heading {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        pointer-events: none;
+    }
+
+    h3 {
+        pointer-events: none;
+    }
+
+    form, .form {
+        width: 60%;
+        height: 80%;
+        overflow-y: scroll;
+        height: min-content;
+        padding: 1.5em;
+
+
+        .input_contianer {
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: 1.2em;
+                margin-bottom: 0.5em;
+            }
+
+            .label {
+                font-size: 1.2em;
+                margin-bottom: 0.5em;
+                pointer-events: none;
+            }
+
+            input, .select {
+                padding: 1em;
+                padding-top: 1.5em;
+                padding-bottom: 1.5em;
+                padding-left: 1.5em;
+                border: rgb(34, 33, 33) 1px solid;
+            }
+
+            .Detail_text {
+                font-size: 1.3em;
+                color: black;
+            }
+        }
+
+        .submit_btn {
+            border: rgb(34, 33, 33) 0.5px solid;
+            outline: none;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            background: white;
+            font-size: 1.1em;
+        }
+    }
+
+    .form {
+        overflow: auto;
+    }
+
+    .contianer { 
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .button_contianer {
+        width: 20%;
+        height: 20%;
+    }
+
+    .a {
+        text-decoration: none;
+    }
+
+    .btn {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        color: rgb(0, 0, 0);
+        border: rgb(34, 33, 33) 0.5px solid;
+        outline: none;
+        background: white;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .btn:hover {
+        color: rgb(255, 0, 0);
+        border: rgb(255, 0, 0) 0.5px solid;
+    }
+
+    .left {
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+    }
+
+    table {
+        border: 0.5px black solid;
+        width: 60%;
+        overflow-y: scroll;
+        margin-top: 0.5em;
+
+        tr, th, td {
+            border: 0.5px solid black;
+            padding: 0.5em 1em;
+        }
+
+        th {
+            color: red;
+        }
+
+        tr td {
+            text-decoration: underline black;
+            color: black;
+
+            a {
+                text-decoration: underline black;
+                color: black;
+            }
+        }
+    }
+
+    .submit_btn {
+        border: rgb(34, 33, 33) 0.5px solid;
+        outline: none;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        background: white;
+        font-size: 1.1em;
+        margin-top: 0.5em;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .logout {
+        position: absolute;
+        bottom: 2em;
+        right: 2em;
+        border: 0.5px solid black;
+        padding: 0.5em;
+        outline: none;
+        background: white;
+        transition: all ease-in-out 0.5s;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            transition: all ease-in-out 0.5s;
+        }
+    }
+
+    .logout:hover {
+        border: 0.5px solid rgb(255, 0, 0);
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 0, 0);
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{%  extends 'base.html' %}
+{% block content %}
+
+<h2 class="heading">Couse Registration</h2>
+
+<p>{{msg}}</p>
+
+<form action="/reg_course/{{id}}" method="POST">
+
+
+    {% for course in courses %}
+            
+    <div class="input_contianer">
+        <label for="course">{{course.COURSE_NAME}}</label>
+        <input value="{{course.COURSE_ID}}" type="checkbox" name="{{course.COURSE_ID}}" id="course">
+    </div>
+
+    {% endfor %}
+
+    <input type="hidden" value="register" name="submit">
+    <button class="submit_btn" type="submit">submit</button>
+</form>
+
+{% endblock content %}

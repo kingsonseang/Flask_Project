@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 class="heading">Welcome {{ student.first_name }}</h1>
+
+    <div class="form">
+        
+        <div class="input_contianer">
+            <p class="label">STUDENT ID</p>
+            <p class="Detail_text">{{ student.STUDENT_ID }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">First Name</p>
+            <p class="Detail_text">{{ student.first_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Middle Name</p>
+            <p class="Detail_text">{{ student.middle_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Last Name</p>
+            <p class="Detail_text">{{ student.last_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Age</p>
+            <p class="Detail_text">{{ student.age }}</p>
+        </div>      
+    
+        <div class="input_contianer">
+            <p class="label">Gaurdian Name</p>
+            <p class="Detail_text">{{ student.Gaurdian_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Gaurdian Phone Number</p>
+            <p class="Detail_text">{{ student.Gaurdian_phone_number }}</p>
+        </div>
+
+    </div>    
+
+    <h3 class="sub_heading">Registered Courses</h3>
+
+    <table>
+        <tr>
+            <th>Course Registration Id</th>
+            <th>Course Code</th>
+        </tr>
+        {% for course in course %}
+        <tr>
+            <td>{{course.COURSE_REG_ID}}</td>
+            <td><a href="/course/{{course.COURSE_ID}}">{{course.COURSE_ID}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <button class="submit_btn"><a href="/reg_course/{{student.STUDENT_ID}}">register a course</a></button>
+
+    <button class="logout"><a href="/">Logout</a></button>
+
+{% endblock content %}

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: #161616;
+  padding-bottom: 5%;
+  font-family: Roboto, sans-serif;
+}
+
+body .heading {
+  font-size: 2.5em;
+  margin-top: 1.7em;
+  margin-bottom: 0.5em;
+  pointer-events: none;
+}
+
+body .sub_heading {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  pointer-events: none;
+}
+
+body h3 {
+  pointer-events: none;
+}
+
+body form, body .form {
+  width: 60%;
+  height: 80%;
+  overflow-y: scroll;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 1.5em;
+}
+
+body form .input_contianer, body .form .input_contianer {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body form .input_contianer label, body .form .input_contianer label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+body form .input_contianer .label, body .form .input_contianer .label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  pointer-events: none;
+}
+
+body form .input_contianer input, body form .input_contianer .select, body .form .input_contianer input, body .form .input_contianer .select {
+  padding: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1.5em;
+  border: #222121 1px solid;
+}
+
+body form .input_contianer .Detail_text, body .form .input_contianer .Detail_text {
+  font-size: 1.3em;
+  color: black;
+}
+
+body form .submit_btn, body .form .submit_btn {
+  border: #222121 0.5px solid;
+  outline: none;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background: white;
+  font-size: 1.1em;
+}
+
+body .form {
+  overflow: auto;
+}
+
+body .contianer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .button_contianer {
+  width: 20%;
+  height: 20%;
+}
+
+body .a {
+  text-decoration: none;
+}
+
+body .btn {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: black;
+  border: #222121 0.5px solid;
+  outline: none;
+  background: white;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+body .btn:hover {
+  color: red;
+  border: red 0.5px solid;
+}
+
+body .left {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+}
+
+body .left a {
+  text-decoration: none;
+  color: red;
+}
+
+body table {
+  border: 0.5px black solid;
+  width: 60%;
+  overflow-y: scroll;
+  margin-top: 0.5em;
+}
+
+body table tr, body table th, body table td {
+  border: 0.5px solid black;
+  padding: 0.5em 1em;
+}
+
+body table th {
+  color: red;
+}
+
+body table tr td {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+  color: black;
+}
+
+body table tr td a {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+  color: black;
+}
+
+body .submit_btn {
+  border: #222121 0.5px solid;
+  outline: none;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background: white;
+  font-size: 1.1em;
+  margin-top: 0.5em;
+}
+
+body .submit_btn a {
+  text-decoration: none;
+  color: black;
+}
+
+body .logout {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  border: 0.5px solid black;
+  padding: 0.5em;
+  outline: none;
+  background: white;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+body .logout a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+body .logout:hover {
+  border: 0.5px solid red;
+}
+
+body .logout:hover a {
+  text-decoration: none;
+  color: red;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

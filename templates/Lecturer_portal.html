@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 class="heading">Welcome {{ LECTURER.first_name }}</h1>
+
+    <div class="form">
+
+        <div class="input_contianer">
+            <p class="label">LECTURER ID</p>
+            <p class="Detail_text">{{ LECTURER.LECTURERs_id }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">First Name</p>
+            <p class="Detail_text">{{ LECTURER.first_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Middle Name</p>
+            <p class="Detail_text">{{ LECTURER.middle_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Last Name</p>
+            <p class="Detail_text">{{ LECTURER.last_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Age</p>
+            <p class="Detail_text">{{ LECTURER.age }}</p>
+        </div>      
+        
+        <div class="input_contianer">
+            <p class="label">Phone Number</p>
+            <p class="Detail_text">{{ LECTURER.phone_number }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Email</p>
+            <p class="Detail_text">{{ LECTURER.email }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Department</p>
+            <p class="Detail_text">{{ LECTURER.DEPARTMENT_ID }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Next of Kin</p>
+            <p class="Detail_text">{{ LECTURER.next_of_kin_name }}</p>
+        </div>
+        
+        <div class="input_contianer">
+            <p class="label">Next of Kin</p>
+            <p class="Detail_text">{{ LECTURER.next_of_kin_phone_number }}</p>
+        </div>
+
+    </div> 
+
+    <h2 class="sub_heading">Courses Teaching</h2>
+
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td><a href="/course/{{course.COURSE_ID}}">{{course.COURSE_ID}}</a></td>
+            <td>{{course.COURSE_NAME}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <button class="logout"><a href="/">Logout</a></button>
+
+{% endblock content%}
+
